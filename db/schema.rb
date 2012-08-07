@@ -11,10 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120805152339) do
+ActiveRecord::Schema.define(:version => 20120805221409) do
+
+  create_table "decimal_custom_accessor_price_products", :force => true do |t|
+    t.decimal "amount", :precision => 10, :scale => 2
+  end
 
   create_table "decimal_price_products", :force => true do |t|
     t.decimal "price", :precision => 10, :scale => 2
+  end
+
+  create_table "integer_money_rails_products", :force => true do |t|
+    t.integer "price_cents"
   end
 
 end
